@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="一个简洁的中文抽签转盘，每个选项都有相同的机会。">
+  <title>抽签转盘 · Wency</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header><a href="./" class="wordmark">Wency<span>.</span></a><span>抽签转盘</span></header>
+  <main>
+    <section class="wheel-panel" aria-labelledby="title">
+      <h1 id="title">抽签转盘<span>.</span></h1>
+      <div class="wheel-wrap">
+        <span class="pointer" aria-hidden="true"></span>
+        <svg id="wheel" viewBox="0 0 400 400" role="img" aria-label="抽签转盘，选项详见右侧输入框"></svg>
+        <button id="center" aria-label="开始抽签" class="center-button">抽签<span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="result" role="status" aria-live="polite" aria-atomic="true"><span class="small-label">抽签结果</span><p id="result">等待开始</p></div>
+    </section>
+    <section class="options-panel" aria-labelledby="options-title">
+      <div class="label-row"><h2 id="options-title"><label for="options">选项</label></h2><span id="count">0 / 50</span></div>
+      <p id="help">每行一个名字或事项，输入 2–50 个选项。<br>每一行的抽中机会相同，空行会被忽略。</p>
+      <textarea id="options" rows="10" spellcheck="false" aria-describedby="help error">读一本书
+去散步
+看一部电影
+做一顿饭
+听听音乐
+喝杯茶</textarea>
+      <p id="error" role="alert"></p>
+      <button id="start" class="start-button">开始抽签 <span aria-hidden="true">↗</span></button>
+      <p class="privacy">内容只留在当前页面，不上传、不保存。<br>相同内容的多行会作为多个选项参与抽签。</p>
+    </section>
+  </main>
+  <footer><span>Wency Miao</span><span>抽签转盘</span></footer>
+</body>
+</html>
